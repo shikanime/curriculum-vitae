@@ -1,0 +1,478 @@
+% !TEX program = xelatex
+% !TeX encoding = UTF-8
+
+\documentclass[letterpaper,11pt]{article}
+
+% Remove margins
+\usepackage[empty]{fullpage}
+
+% Customize section titles
+\usepackage{titlesec}
+
+% Customize lists
+\usepackage{enumitem}
+
+% Add links to URLs
+\usepackage[hidelinks]{hyperref}
+
+% Make tables more flexible
+\usepackage{tabularx}
+
+% Multi-language support
+\usepackage[bidi=default]{babel}
+
+% Font support
+\usepackage{fontspec}
+\usepackage{microtype}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+% Use the same font for URLs
+\urlstyle{same}
+
+% Remove extra space of the page
+\raggedbottom{}
+\raggedright{}
+
+% Remove extra space between columns
+\setlength{\tabcolsep}{0in}
+
+% Remove extra space between footer and text
+\setlength{\footskip}{5pt}
+
+% Sections formatting
+\titleformat{\section}
+{\vspace{-4pt}\scshape\raggedright\large}
+{}
+{0em}
+{}
+[\titlerule\vspace{-5pt}]
+
+% Change bullet points to circles
+\renewcommand{\labelitemii}{\(\circ\)}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+	\textbf{\Large William Phetsinorath} &
+	\href{mailto:contact@shikanime.studio}{contact@shikanime.studio}\\
+	\href{https://links.shikanime.studio}{links.shikanime.studio} &
+	% Where it all began, where it'll end.
+	% From a little dream, to a big dream.
+	\href{tel:+XXXXXXXXXXX}{+XX X XX XX XX XX} \\
+\end{tabular*}
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+\resumeSubHeadingListStart{}
+
+\resumeSubheading{SFEIR}
+{Since February 2021}
+{Solutions Architect}
+\resumeItemListStart{}
+\resumeItem{
+	Design and implementation of highly scalable MLOps and data platforms for
+	organizations of varying sizes, by integrating diverse on-premise and
+	cloud-based data sources.
+}
+\resumeItem{
+	Responsible for designing and implementing data architecture solutions using
+	various technologies such as Google Cloud, Amazon Web Services, Apache Beam,
+	DBT and BigQuery.
+}
+\resumeItem{
+	Provide technical leadership to a team of data engineers and data scientists,
+	driving innovation and identifying opportunities for process optimization and
+	automation.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubSubheading{Cloud Engineer}
+{September 2018 - October 2021}
+\resumeItemListStart{}
+\resumeItem{
+	Provided expert guidance on cloud transformation for multiple companies,
+	driving successful adoption of cloud-native technologies, including serverless
+	and Kubernetes.
+}
+\resumeItem{
+	Architected scalable and resilient cloud solutions, incorporating DevOps best
+	practices to ensure high availability, performance, and security.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{Orano}
+{Since November 2023}
+{Machine Learning Consultant}
+\resumeItemListStart{}
+\resumeItem{Undisclosed.}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{Webedia}
+{Since September 2023}
+{Cloud Engineer Contractor}
+\resumeItemListStart{}
+\resumeItem{Undisclosed.}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{TotalEnergies}
+{Since July 2021}
+{Data Engineer Contractor}
+\resumeItemListStart{}
+\resumeItem{
+	Industrialization of satellite image analysis research, working closely
+	with a team of data scientists to develop statistical models and deep learning
+	algorithms on the Google Earth Engine. Resulted in successful monitoring and
+	reporting of crop health, solar panel yields, environmental impacts, and
+	natural disaster damage detection.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{TAG Heuer}
+{June 2023 - November 2023}
+{Cloud Engineer Contractor}
+\resumeItemListStart{}
+\resumeItem{
+	I spearhead the management and optimization of the division's cloud
+	infrastructure, encompassing network architecture, access control, system
+	integration, and all organizational cloud platform security-related matters.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{Renault-Nissan-Mitsubishi}
+{September 2022 - Jun 2023}
+{Cloud Engineer Contractor}
+\resumeItemListStart{}
+\resumeItem{
+	Designed and deployed a mission-critical IoT gateway on Kubernetes, utilizing
+	Canary deployment strategy and end-to-end encryption to route traffic for over
+	three million smart cars globally.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{Paprec}
+{January 2023 - April 2023}
+{Machine Learning Engineer Contractor}
+\resumeItemListStart{}
+\resumeItem{
+	Designed and implemented a Kubeflow-based MLOps pipeline on Vertex AI to enable
+	end-to-end machine learning workflows, leveraging PyTorch for model training and
+	deployment.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{Amadeus}
+{January 2023 - February 2023}
+{Machine Learning Engineer Contractor}
+\resumeItemListStart{}
+\resumeItem{
+	Developed and deployed a robust MLOps pipeline on Vertex AI using Kubeflow to
+	enable end-to-end machine learning workflows. Employed Tensorflow and Tensorflow
+	Extended for model training, evaluation, deployment, and monitoring of skew and
+	drift. Resulted in enhanced model experimentation, improved efficiency and
+	move-to-production time.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{Birdz}
+{October 2019 - November 2022}
+{Cloud Engineer Contractor}
+\resumeItemListStart{}
+\resumeItem{
+	Designed and deployed a high-throughput streaming and batch data pipeline
+	infrastructure capable of handling over 2,000 messages per second, while ensuring
+	fault-tolerant traffic management for optimal data flow and reliability.
+}
+\resumeItem{
+	Implemented performance monitoring in all components using Open Telemetry,
+	consumed through Stackdriver, Error Reporting, and Cloud Tracing to ensure
+	continuous optimization of the data pipeline's performance and efficiency.
+}
+\resumeItem{
+	Participated in the design of a Domain-Specific Language (DSL), which included the
+	declarative binary frame reader, flow control, and Input/Output (IO) interface
+	for efficient and streamlined data processing.
+}
+\resumeItem{
+	Designed and implemented a lightweight JSON-RPC-based protocol around the
+	OCaml language runtime to facilitate microservices development through HTTP,
+	browser via a Web worker, and Command-Line Interface (CLI), resulting in a more
+	efficient and scalable microservices environment.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{LVMH}
+{February 2022 - October 2022}
+{Data Architect Contractor}
+\resumeItemListStart{}
+\resumeItem{
+	Designed and implemented an effective ingestion architecture to handle complex
+	data sources, ensuring daily data freshness.
+}
+\resumeItem{
+	Developed an extensible and flexible Terraform module that can be customized for
+	different sub-brands of the group, increasing data platform reusability and
+	coherence.
+}
+\resumeItem{
+	Provided technical guidance to developers on selecting appropriate input formats,
+	including Avro, Parquet, and CSV, and evaluated their constraints for over 250
+	tables, including non-english UTF-8 text encoding.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{Leasys Rent}
+{May 2022 - July 2022}
+{Cloud Architect Contractor}
+\resumeItemListStart{}
+\resumeItem{
+	Designed and implemented a modern application architecture solution for Leasys Rent,
+	leveraging Lift and Shift to OpenID authentication. Successfully integrated the
+	new system without causing disruptions to the existing system.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubSubheading{Data Engineer Contractor}
+{February 2021 - June 2021}
+\resumeItemListStart{}
+\resumeItem{
+	Analyzed and extracted relevant metrics for customer needs using SQL on
+	BigQuery, leading to improved data-driven insights for business decisions.
+}
+\resumeItem{
+	Created interactive and user-friendly Google Data Studio dashboards for daily
+	monitoring of accounting metrics, vehicle fleet status, and invoice tracking,
+	resulting in improved operational efficiency and timely detection of fleet
+	anomalies.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{Futures Factory}
+{January 2022 - March 2022}
+{Cloud Engineer Contractor}
+\resumeItemListStart{}
+\resumeItem{
+	Designed and developed a secure user authentication system supporting Metamask
+	and Magic.link, with an asymmetric cryptographic challenge for enhanced
+	security.
+}
+\resumeItem{
+	Improved the user experience by implementing ERC2771 on smart contracts,
+	enabling the transfer of NFTs without gas fees.
+}
+\resumeItem{
+	Integrated Stripe fiat payment system with the service submitting ERC2771
+	transactions to the Polygon blockchain.
+}
+\resumeItem{
+	Designed a state machine to orchestrate fiat and on-chain transactions, resolved
+	issues such as front-running bots, currency conversion, and ensured optimal user
+	experience during the purchasing process.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{The Estée Lauder Companies Inc.}
+{September 2021 - January 2022}
+{Data Architect Contractor}
+\resumeItemListStart{}
+\resumeItem{
+	Designed a Lift and Shift migration plan and assisted the customer in automating
+	and optimizing an MVP through the use of Python scripts, eliminating manual
+	processes and improving operational efficiency.
+}
+\resumeItem{
+	Provided technical and architectural guidance to the development team, ensuring
+	compatibility with legacy systems and improving overall system performance.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{GALEC - Groupement d'Achats E.LECLERC}
+{August 2021 - January 2022}
+{Data Engineer Contractor}
+\resumeItemListStart{}
+\resumeItem{
+	Designed and implemented a scalable data ingestion architecture to support over
+	15,000 point-of-sale sales per day on a European scale, utilizing Apache Beam
+	for data normalization and BigQuery for data warehousing.
+}
+\resumeItem{
+	Processed and analyzed 2.5 terabytes of data daily on Cloud Dataflow and
+	BigQuery, improving data-driven insights for supply chain operational decisions
+	and providing stakeholders with up-to-date information.
+}
+\resumeItem{
+	Automated daily, weekly, and monthly task workflows using Apache Airflow,
+	improving the overall efficiency and productivity of the data platform and
+	enabling for more impactful data analysis tasks.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{Evidian - Atos Cyber Security}
+{December 2020 - March 2021}
+{Cloud Engineer Contractor}
+\resumeItemListStart{}
+\resumeItem{
+	Integrated Evidian IDaaS software into Google Cloud Marketplace, developing
+	event-driven integrations with internal Google Marketplace infrastructure.
+	Created backend API for subscription creation, consumption monitoring, customer
+	registration, and Evidian backoffice integration, boosting service delivery
+	capabilities.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{KMB Labs}
+{June 2017 - December 2017}
+{Software Engineer Intern}
+\resumeItemListStart{}
+\resumeItem{
+	Developed and implemented new conversational dialogues and user interactive
+	elements for Facebook Messenger chatbots using React library and wit.ai Natural
+	Language Processing service, enhancing the chatbot's user experience and
+	engagement.
+}
+\resumeItem{
+	Implemented a scalable data ingestion pipeline to process 10,000+ customer jobs
+	across multiple SQL, NoSQL and search engine databases daily on Amazon Web
+	Service, providing content to 10000+ active users daily, and enhancing the
+	chatbot's functionalities.
+}
+\resumeItemListEnd{}
+
+
+\resumeSubheading{École d'Alternance en Informatique}
+{September 2017 - October 2017}
+{Teaching Assistant}
+\resumeItemListStart{}
+\resumeItem{
+	Designed and facilitated dynamic activities and workshops to engage +100 first
+	year students in learning system languages such as C, AWK, Perl, Bash, Web, and
+	Unix system fundamentals.
+}
+\resumeItem{
+	Conducted evaluation interviews at the end of student projects, providing
+	constructive feedback and guidance for improvement.
+}
+\resumeItemListEnd{}
+\resumeSubHeadingListEnd{}
+
+
+\section{Education}
+\resumeSubHeadingListStart{}
+\resumeSubheading{École d'Alternance en Informatique}
+{2017 - 2021}
+{Master of Network and Cyber Security Architect}
+\resumeSubHeadingListEnd{}
+
+
+\section{Certifications}
+\resumeSubHeadingListStart{}
+\resumeSubheading{TensorFlow Developer Certification}
+{2022}
+{Google}
+\resumeSubheading{Professional Data Engineer}
+{2021}
+{Google}
+\resumeSubheading{Professional Machine Learning Engineer}
+{2021}
+{Google}
+\resumeSubheading{Certified Kubernetes Application Developer}
+{2021}
+{Linux Foundation}
+\resumeSubheading{Terraform Associate}
+{2021}
+{HashiCorp}
+\resumeSubheading{Professional Cloud Developer}
+{2019}
+{Google}
+\resumeSubHeadingListEnd{}
+
+
+\section{Languages}
+\resumeSubHeadingListStart{}
+\resumeItem{
+	\textbf{French:}{
+		Native or bilingual proficiency
+	}
+}
+\resumeItem{
+	\textbf{English:}{
+		Native or bilingual proficiency
+	}
+}
+\resumeItem{
+	\textbf{Mandarin Chinese:}{
+		Limited working proficiency
+	}
+}
+\resumeItem{
+	\textbf{Japanese:}{
+		Elementary proficiency
+	}
+}
+\resumeSubHeadingListEnd{}
+
+
+\section{Technical Skills \& Interests}
+\resumeSubHeadingListStart{}
+\resumeItem{
+	\textbf{Languages:}{
+		Go, C/C++, SQL, Python, OCaml
+	}
+}
+\resumeItem{
+	\textbf{Technologies:}{
+		TensorFlow, PyTorch, Apache Beam, Kubernetes, BigQuery
+	}
+}
+\resumeSubHeadingListEnd{}
+
+\end{document}
