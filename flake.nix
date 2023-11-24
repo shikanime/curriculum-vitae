@@ -20,41 +20,50 @@
     ];
   };
 
-  outputs = { nixpkgs, devenv, ... }@inputs: {
-    formatter = nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed (system:
-      let pkgs = import nixpkgs { inherit system; }; in
-      pkgs.nixpkgs-fmt
-    );
+  outputs = { nixpkgs, devenv, ... }@inputs:
+    let
+      systems = [
+        "aarch64-darwin"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "x86_64-linux"
+      ];
+    in
+    {
+      formatter = nixpkgs.lib.genAttrs systems (system:
+        let pkgs = import nixpkgs { inherit system; }; in
+        pkgs.nixpkgs-fmt
+      );
 
-    packages = nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed (system:
-      let pkgs = import nixpkgs { inherit system; }; in {
-        default = pkgs.callPackage ./default.nix { };
-      }
-    );
+      packages = nixpkgs.lib.genAttrs systems (system:
+        let pkgs = import nixpkgs { inherit system; }; in {
+          default = pkgs.callPackage ./default.nix { };
+        }
+      );
 
-    devShells = nixpkgs.lib.genAttrs nixpkgs.lib.systems.flakeExposed (system:
-      let pkgs = import nixpkgs { inherit system; }; in {
-        default = devenv.lib.mkShell {
-          inherit inputs pkgs;
-          modules = [
-            {
-              pre-commit.hooks = {
-                markdownlint.enable = true;
-                shfmt.enable = true;
-                nixpkgs-fmt.enable = true;
-                statix.enable = true;
-                deadnix.enable = true;
-                prettier.enable = true;
-                latexindent.enable = true;
-                chktex.enable = true;
-              };
-              packages = [
-                pkgs.texlive.combined.scheme-full
-              ];
-            }
-          ];
-        };
-      }
-    );
-  };
+      devShells = nixpkgs.lib.genAttrs systems (system:
+        let pkgs = import nixpkgs { inherit system; }; in {
+          default = devenv.lib.mkShell {
+            inherit inputs pkgs;
+            modules = [
+              {
+                pre-commit.hooks = {
+                  markdownlint.enable = true;
+                  shfmt.enable = true;
+                  nixpkgs-fmt.enable = true;
+                  statix.enable = true;
+                  deadnix.enable = true;
+                  prettier.enable = true;
+                  latexindent.enable = true;
+                  chktex.enable = true;
+                };
+                packages = [
+                  pkgs.texlive.combined.scheme-full
+                ];
+              }
+            ];
+          };
+        }
+      );
+    };
 }
